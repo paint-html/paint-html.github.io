@@ -104,6 +104,7 @@ p {
     
     #footer {
         display: flex;
+        width: 100%;
         justify-content: center;
     }
     
@@ -117,5 +118,35 @@ p {
     
     #youtube-link {
         width: auto;
+    }
+}
+
+@media screen and (max-device-height: 612px) and (orientation: landscape) {
+    h1 {
+        max-width: 50%;
+        align-self: flex-start;
+    }
+    
+    h2 {
+        display: none;
+    }
+    
+    #footer {
+        width: 50%;
+        right: 0;
+        justify-content: center;
+        position: absolute;
+    }
+    
+    #welcome-video {
+        max-width: 320px;
+    }
+    
+    #facebook-link {
+        display: none;
+    }
+    
+    #youtube-link {
+        width: 40%
     }
 }
