@@ -1,6 +1,10 @@
 body {
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
     background-color: #1A4560;
     text-align: center;
     color: #fff;
@@ -9,8 +13,16 @@ body {
 }
 
 h1 {
-    margin: 20px;
-    margin-bottom: 0;
+    width: 100%;
+    margin: 0;
+}
+
+#content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
 }
 
 h2 {
@@ -21,29 +33,14 @@ h2 {
 }
 
 p {
-    display:flex;justify-content:center;align-items:center;width:100vw;height:100vh;
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin: 0;
-    padding: 0 20px;
-    box-sizing: border-box;
     font-size: 20px;
     line-height: 35px;
     font-family: sans-serif;
 }
 
-#footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
 .social-link {
     display: block;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 #facebook-link {
@@ -69,26 +66,28 @@ p {
 }
 
 @media screen and (min-width: 670px) {
-    #col-left {
-        width: 50%;
-        display:flex;justify-content:center;align-items:center;height:100vh;
-        flex-direction: column;
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
     p {
         position: static;
         width: auto;
         height: auto;
     }
+    
+    #col-left, #col-right {
+        max-width: 50%;
+    }
+    
+    #col-left {
+        margin-right: 10px;
+    }
+    
     #col-right {
         display: block;
-        width: 50%;
-        display:flex;justify-content:center;align-items:center;height:100vh;
-        position: absolute;
-        right: 0;
-        top: 0;
+        margin-left: 10px;
+    }
+    
+    #col-right, #welcome-video {
+        width: 100%;
+        max-width: 440px;
     }
     
     #footer {
