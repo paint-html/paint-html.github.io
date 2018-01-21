@@ -40,11 +40,23 @@ p {
 
 .social-link {
     display: block;
-    padding: 0 20px;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 20px;
+    box-shadow: 0 1px 3px 0 black;
+}
+
+.social-link:hover {
+    box-shadow: 0 1px 8px 0 black;
+}
+
+#youtube-link {
+    background-color: #c9401f;
 }
 
 #facebook-link {
     display: none;
+    background-color: #316d80;
 }
 
 #facebook-link img {
@@ -93,6 +105,10 @@ p {
     #footer {
         display: flex;
         justify-content: center;
+    }
+    
+    .social-link {
+        margin: 0 20px;
     }
     
     #facebook-link {
